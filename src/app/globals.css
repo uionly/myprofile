@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Custom form styles */
+input, textarea {
+  @apply border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+/* Typography adjustments */
+.prose {
+  @apply max-w-none;
+}
+
+.prose p {
+  @apply text-gray-600;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+} 
