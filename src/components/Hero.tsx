@@ -28,7 +28,7 @@ const Hero = () => {
                 />
               </div>
               <div className='absolute -bottom-2 -right-2 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg transform transition-transform duration-300 group-hover:scale-105'>
-                <span className='text-sm font-semibold'>AWS Certified</span>
+                <span className='text-sm font-semibold'>GenAI Advocate</span>
               </div>
             </div>
           </motion.div>
@@ -45,16 +45,12 @@ const Hero = () => {
                 Deepak Kumar
               </h1>
               <h2 className='text-2xl md:text-3xl font-semibold text-blue-600 mb-6'>
-                Technical Architect | AWS Certified
+                Technical Architect
               </h2>
               <div className='flex flex-col space-y-3 mb-6'>
                 <div className='flex items-center justify-center md:justify-start'>
                   <span className='text-xl mr-2'>📍</span>
                   <p className='text-gray-600'>Noida, Uttar Pradesh, India</p>
-                </div>
-                <div className='flex items-center justify-center md:justify-start'>
-                  <span className='text-xl mr-2'>📞</span>
-                  <p className='text-gray-600'>+91 7760295006</p>
                 </div>
                 <div className='flex items-center justify-center md:justify-start'>
                   <span className='text-xl mr-2'>✉️</span>

@@ -2,46 +2,52 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
   try {
-    // LinkedIn API credentials
-    const clientId = process.env.LINKEDIN_CLIENT_ID;
-    const clientSecret = process.env.LINKEDIN_CLIENT_SECRET;
-    const accessToken = process.env.LINKEDIN_ACCESS_TOKEN;
-    const profileId = process.env.LINKEDIN_PROFILE_ID;
-
-    if (!clientId || !clientSecret || !accessToken || !profileId) {
-      throw new Error('LinkedIn API credentials not configured');
-    }
-
-    // Fetch articles from LinkedIn API
-    const response = await fetch(
-      `https://api.linkedin.com/v2/articles?author=${profileId}`,
+    const articles = [
       {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-          'X-Restli-Protocol-Version': '2.0.0',
-        },
-      }
-    );
-
-    if (!response.ok) {
-      throw new Error('Failed to fetch articles from LinkedIn');
-    }
-
-    const data = await response.json();
-
-    // Transform the data into our format
-    const articles = data.elements.map((article: any) => ({
-      id: article.id,
-      title: article.title,
-      summary: article.summary,
-      publishedAt: article.created.time,
-      url: article.url,
-      imageUrl: article.thumbnail?.url,
-    }));
+        id: '1',
+        title: 'Generative Coding Tools (Cursor AI and Others)',
+        url: 'https://www.linkedin.com/pulse/generative-coding-tools-cursor-ai-others-deepak-kumar-vha7c',
+        publishedAt: '2024-04-15',
+        summary:
+          'AI-powered code assistants are rapidly reshaping the way we build applications. Tools like GitHub Copilot, Tabnine, Codeium, Amazon Code Whisperer, and Cursor AI are transforming the development landscape.',
+      },
+      {
+        id: '2',
+        title: 'Breaking Down Bugs, One Meme at a Time',
+        url: 'https://www.linkedin.com/pulse/breaking-down-bugs-one-meme-time-deepak-kumar-2tycc',
+        publishedAt: '2024-04-10',
+        summary:
+          'The "Ultimate" Guide to Debugging. A humorous yet practical look at debugging techniques and best practices in software development.',
+      },
+      {
+        id: '4',
+        title: 'AI is the Future, But Stay Focused on Your Skills!',
+        url: 'https://www.linkedin.com/pulse/ai-future-stay-focused-your-skills-deepak-kumar-rscsc',
+        publishedAt: '2024-03-30',
+        summary:
+          'A balanced perspective on AI in software development and the importance of maintaining core technical skills.',
+      },
+      {
+        id: '5',
+        title: 'Quality vs. Quantity: Real Experiment with API',
+        url: 'https://www.linkedin.com/pulse/quality-vs-quantity-real-experiment-api-deepak-kumar-eckmc',
+        publishedAt: '2024-03-25',
+        summary:
+          'As a Developer Advocate, exploring the balance between quality and speed in software development through practical experimentation.',
+      },
+      {
+        id: '6',
+        title: "Work-Life Balance: It's a Two-Way Street!",
+        url: 'https://www.linkedin.com/pulse/work-life-balance-its-two-way-street-deepak-kumar-ssdrc',
+        publishedAt: '2024-03-20',
+        summary:
+          "A perspective on work-life balance in the tech industry, particularly focusing on Gen Z's approach to professional life.",
+      },
+    ];
 
     return NextResponse.json({ articles });
   } catch (error) {
-    console.error('Error fetching LinkedIn articles:', error);
+    console.error('Error in LinkedIn articles API:', error);
     return NextResponse.json(
       { error: 'Failed to fetch articles' },
       { status: 500 }
