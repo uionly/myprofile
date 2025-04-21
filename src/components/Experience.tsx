@@ -63,59 +63,105 @@ const experiences: Experience[] = [
 
 const Experience = () => {
   return (
-    <section id='experience' className='py-16 bg-gray-50'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <h2 className='text-3xl font-bold text-gray-900 mb-12'>
+    <section
+      id='experience'
+      className='py-20 bg-gradient-to-b from-gray-50 to-white'
+    >
+      <div className='w-full px-4 sm:px-6 lg:px-8'>
+        <h2 className='text-4xl font-bold text-gray-900 mb-16 text-center'>
           Professional Journey
         </h2>
         <div className='relative'>
-          {/* Timeline line */}
-          <div className='absolute left-0 md:left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200'></div>
+          {/* Main timeline line */}
+          <div className='absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-400 via-blue-500 to-blue-600'></div>
 
-          <div className='space-y-12'>
+          <div className='space-y-8'>
             {experiences.map((exp, index) => (
-              <div
-                key={index}
-                className={`relative flex items-start ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
-              >
+              <div key={index} className='relative'>
                 {/* Timeline dot */}
-                <div className='absolute left-0 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-500 rounded-full border-4 border-white'></div>
+                <div className='absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-500 rounded-full border-4 border-white shadow-lg'></div>
 
                 {/* Content */}
-                <div
-                  className={`ml-6 md:ml-0 md:w-1/2 ${
-                    index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'
-                  }`}
-                >
-                  <div className='bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow'>
-                    <div className='flex justify-between items-start mb-4'>
-                      <div>
-                        <h3 className='text-xl font-bold text-gray-900'>
-                          {exp.company}
-                        </h3>
-                        <p className='text-lg font-semibold text-blue-600'>
+                <div className='w-full max-w-4xl mx-auto'>
+                  <div className='bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border-l-4 border-blue-500'>
+                    <div className='flex flex-col space-y-2 mb-6'>
+                      <h3 className='text-2xl font-bold text-gray-900'>
+                        {exp.company}
+                      </h3>
+                      <div className='flex flex-wrap items-center gap-4 text-sm text-gray-500'>
+                        <span className='flex items-center'>
+                          <svg
+                            className='w-4 h-4 mr-1'
+                            fill='none'
+                            stroke='currentColor'
+                            viewBox='0 0 24 24'
+                          >
+                            <path
+                              strokeLinecap='round'
+                              strokeLinejoin='round'
+                              strokeWidth='2'
+                              d='M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'
+                            />
+                          </svg>
                           {exp.role}
-                        </p>
-                      </div>
-                      <div className='text-right'>
-                        <p className='text-sm font-medium text-gray-600'>
+                        </span>
+                        <span className='flex items-center'>
+                          <svg
+                            className='w-4 h-4 mr-1'
+                            fill='none'
+                            stroke='currentColor'
+                            viewBox='0 0 24 24'
+                          >
+                            <path
+                              strokeLinecap='round'
+                              strokeLinejoin='round'
+                              strokeWidth='2'
+                              d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z'
+                            />
+                          </svg>
                           {exp.duration}
-                        </p>
-                        <p className='text-sm text-gray-500'>{exp.location}</p>
+                        </span>
+                        <span className='flex items-center'>
+                          <svg
+                            className='w-4 h-4 mr-1'
+                            fill='none'
+                            stroke='currentColor'
+                            viewBox='0 0 24 24'
+                          >
+                            <path
+                              strokeLinecap='round'
+                              strokeLinejoin='round'
+                              strokeWidth='2'
+                              d='M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z'
+                            />
+                            <path
+                              strokeLinecap='round'
+                              strokeLinejoin='round'
+                              strokeWidth='2'
+                              d='M15 11a3 3 0 11-6 0 3 3 0 016 0z'
+                            />
+                          </svg>
+                          {exp.location}
+                        </span>
                       </div>
                     </div>
-                    <ul className='mt-4 space-y-2'>
+                    <ul className='space-y-3'>
                       {exp.highlights.map((highlight, i) => (
-                        <li key={i} className='flex items-start'>
-                          <span className='text-blue-500 mr-2'>•</span>
-                          <span className='text-gray-600'>{highlight}</span>
+                        <li key={i} className='flex items-start group'>
+                          <span className='flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-blue-500 group-hover:bg-blue-600 transition-colors'></span>
+                          <span className='ml-3 text-gray-600 group-hover:text-gray-900 transition-colors'>
+                            {highlight}
+                          </span>
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
+
+                {/* Connecting line between dots */}
+                {index < experiences.length - 1 && (
+                  <div className='absolute left-1/2 transform -translate-x-1/2 h-8 w-1 bg-gradient-to-b from-blue-400 to-blue-600'></div>
+                )}
               </div>
             ))}
           </div>
