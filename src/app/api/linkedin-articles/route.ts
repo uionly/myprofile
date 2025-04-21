@@ -12,6 +12,15 @@ export async function GET() {
           'AI-powered code assistants are rapidly reshaping the way we build applications. Tools like GitHub Copilot, Tabnine, Codeium, Amazon Code Whisperer, and Cursor AI are transforming the development landscape.',
       },
       {
+        id: '3',
+        title: 'System Design – What’s the Big Deal',
+        url: 'https://www.tothenew.com/blog/system-design-whats-the-big-deal/',
+        publishedAt: '2025-01-16',
+        summary:
+          'AI-powered code assistants are rapidly reshaping the way we build applications. Tools like GitHub Copilot, Tabnine, Codeium, Amazon Code Whisperer, and Cursor AI are transforming the development landscape.',
+      },
+
+      {
         id: '2',
         title: 'Breaking Down Bugs, One Meme at a Time',
         url: 'https://www.linkedin.com/pulse/breaking-down-bugs-one-meme-time-deepak-kumar-2tycc',

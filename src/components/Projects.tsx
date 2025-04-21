@@ -54,12 +54,28 @@ const projects: Project[] = [
     company: 'TELUS International',
   },
   {
+    title: 'OMS Analytics Dashboard ',
+    description:
+      'Developed a responsive web interface integrating Tableau dashboards, enhancing UX for order management analytics using Angular and Bootstrap.',
+    technologies: ['Angular, Bootstrap, Tableau'],
+    duration: 'Aug 2016 – July 2017',
+    company: 'TELUS International',
+  },
+  {
     title: 'Experience Centres',
     description:
       'Led web application development for creating immersive audiovisual experiences in client showrooms. Integrated touchscreen solutions and interactive displays.',
     technologies: ['Web Technologies', 'Interactive UI', 'AV Integration'],
     duration: 'Feb 2015 – Jul 2016',
     company: 'Moonraft',
+  },
+  {
+    title: 'Finacle Ebanking',
+    description:
+      'Led development of Finacle e-Banking modules for top global banks; built secure, scalable digital banking features',
+    technologies: ['Web Technologies', 'J2EE', 'Finacle'],
+    duration: 'Jan 2010 – Feb 2015',
+    company: 'Infosys',
   },
 ];
 

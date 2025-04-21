@@ -29,27 +29,52 @@ const Blog = () => {
         setArticles([
           {
             id: '1',
-            title: 'Building Scalable Microservices with Node.js',
-            url: 'https://www.linkedin.com/pulse/building-scalable-microservices-nodejs-deepak-kumar',
-            publishedAt: '2024-03-15',
+            title: 'Generative Coding Tools (Cursor AI and Others)',
+            url: 'https://www.linkedin.com/pulse/generative-coding-tools-cursor-ai-others-deepak-kumar-vha7c',
+            publishedAt: '2024-04-15',
             summary:
-              'Learn how to design and implement scalable microservices using Node.js and best practices for enterprise applications.',
-          },
-          {
-            id: '2',
-            title: 'AWS Cloud Architecture Best Practices',
-            url: 'https://www.linkedin.com/pulse/aws-cloud-architecture-best-practices-deepak-kumar',
-            publishedAt: '2024-02-20',
-            summary:
-              'Explore the best practices for designing and implementing robust cloud architectures on AWS.',
+              'AI-powered code assistants are rapidly reshaping the way we build applications. Tools like GitHub Copilot, Tabnine, Codeium, Amazon Code Whisperer, and Cursor AI are transforming the development landscape.',
           },
           {
             id: '3',
-            title: 'Modern Web Development with React and TypeScript',
-            url: 'https://www.linkedin.com/pulse/modern-web-development-react-typescript-deepak-kumar',
-            publishedAt: '2024-01-10',
+            title: 'System Design – What’s the Big Deal',
+            url: 'https://www.tothenew.com/blog/system-design-whats-the-big-deal/',
+            publishedAt: '2025-01-16',
             summary:
-              'A comprehensive guide to building modern web applications using React and TypeScript.',
+              'AI-powered code assistants are rapidly reshaping the way we build applications. Tools like GitHub Copilot, Tabnine, Codeium, Amazon Code Whisperer, and Cursor AI are transforming the development landscape.',
+          },
+
+          {
+            id: '2',
+            title: 'Breaking Down Bugs, One Meme at a Time',
+            url: 'https://www.linkedin.com/pulse/breaking-down-bugs-one-meme-time-deepak-kumar-2tycc',
+            publishedAt: '2024-04-10',
+            summary:
+              'The "Ultimate" Guide to Debugging. A humorous yet practical look at debugging techniques and best practices in software development.',
+          },
+          {
+            id: '4',
+            title: 'AI is the Future, But Stay Focused on Your Skills!',
+            url: 'https://www.linkedin.com/pulse/ai-future-stay-focused-your-skills-deepak-kumar-rscsc',
+            publishedAt: '2024-03-30',
+            summary:
+              'A balanced perspective on AI in software development and the importance of maintaining core technical skills.',
+          },
+          {
+            id: '5',
+            title: 'Quality vs. Quantity: Real Experiment with API',
+            url: 'https://www.linkedin.com/pulse/quality-vs-quantity-real-experiment-api-deepak-kumar-eckmc',
+            publishedAt: '2024-03-25',
+            summary:
+              'As a Developer Advocate, exploring the balance between quality and speed in software development through practical experimentation.',
+          },
+          {
+            id: '6',
+            title: "Work-Life Balance: It's a Two-Way Street!",
+            url: 'https://www.linkedin.com/pulse/work-life-balance-its-two-way-street-deepak-kumar-ssdrc',
+            publishedAt: '2024-03-20',
+            summary:
+              "A perspective on work-life balance in the tech industry, particularly focusing on Gen Z's approach to professional life.",
           },
         ]);
       } finally {
