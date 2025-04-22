@@ -38,14 +38,12 @@ const Navigation = () => {
           </div>
 
           <div className='flex items-center space-x-4'>
-            <a
-              href='/resume.pdf'
+            <Link
+              href='/resume'
               className='bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors'
-              target='_blank'
-              rel='noopener noreferrer'
             >
               Resume
-            </a>
+            </Link>
           </div>
         </div>
       </div>
