@@ -29,6 +29,9 @@ const Navigation = () => {
             <Link href='/#blog' className='text-gray-600 hover:text-gray-900'>
               Blog
             </Link>
+            <Link href='/MCP' className='text-gray-600 hover:text-gray-900'>
+              MCP
+            </Link>
             <Link
               href='/#contact'
               className='text-gray-600 hover:text-gray-900'
@@ -38,14 +41,12 @@ const Navigation = () => {
           </div>
 
           <div className='flex items-center space-x-4'>
-            <a
-              href='/resume.pdf'
+            <Link
+              href='/resume'
               className='bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors'
-              target='_blank'
-              rel='noopener noreferrer'
             >
               Resume
-            </a>
+            </Link>
           </div>
         </div>
       </div>

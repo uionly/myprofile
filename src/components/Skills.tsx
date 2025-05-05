@@ -1,12 +1,12 @@
 'use client';
 
-interface SkillCategory {
+export interface SkillCategory {
   name: string;
   skills: string[];
   icon: string;
 }
 
-const skillCategories: SkillCategory[] = [
+export const skillCategories: SkillCategory[] = [
   {
     name: 'Languages',
     skills: ['Node.js', 'JavaScript', 'TypeScript', 'Python', 'Java'],

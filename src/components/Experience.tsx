@@ -8,7 +8,7 @@ interface Experience {
   highlights: string[];
 }
 
-const experiences: Experience[] = [
+export const experiences: Experience[] = [
   {
     company: 'TO THE NEW',
     role: 'Technical Architect',
