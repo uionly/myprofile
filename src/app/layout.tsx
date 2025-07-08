@@ -17,6 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
+      <head><meta name="google-site-verification" content="AEquRibLW5YQ8fUg9pSkpUVap138s-jJtTg7h0pEsAA" /></head>
       <body className={inter.className}>
         <main className='min-h-screen bg-white'>{children}</main>
       </body>
